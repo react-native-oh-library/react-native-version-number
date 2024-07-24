@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "VersionNumberAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "VersionNumberAbility_label",
+      "value": "label"
+    }
+  ]
+}
