@@ -1,19 +1,13 @@
 /* @flow */
 
-import { NativeModules } from 'react-native';
+import { TurboModuleRegistry } from 'react-native';
 
-const { RNVersionNumber } = NativeModules;
+const getData = TurboModuleRegistry.get("VersionNumberNativeModule");
 
-type VersionObject = {
-  appVersion: ?string,
-  buildVersion: ?string,
-  bundleIdentifier: ?string
-};
-
-const VersionNumber: VersionObject = {
-  appVersion: RNVersionNumber && RNVersionNumber.appVersion,
-  buildVersion: RNVersionNumber && RNVersionNumber.buildVersion,
-  bundleIdentifier: RNVersionNumber && RNVersionNumber.bundleIdentifier
+const VersionNumber = {
+  appVersion:  getData.getAppVersion(),
+  buildVersion:  getData.getBuildVersion(),
+  bundleIdentifier: getData.getBundleIdentifier()
 };
 
 export default VersionNumber;
