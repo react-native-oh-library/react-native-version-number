@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "rnoh_version_number",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet",
+      "2in1"
+    ]
+  }
+}
