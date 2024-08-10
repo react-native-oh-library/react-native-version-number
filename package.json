@@ -1,6 +1,6 @@
 {
   "name": "@react-native-oh-tpl/react-native-version-number",
-  "version": "0.3.6",
+  "version": "0.3.6-0.0.1",
   "description": "Access app version inside React Native",
   "main": "index.js",
   "scripts": {
