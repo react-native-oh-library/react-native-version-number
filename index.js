@@ -1,8 +1,8 @@
 /* @flow */
 
-import { NativeModules } from 'react-native';
+import { NativeModules, TurboModuleRegistry } from 'react-native';
 
-const { RNVersionNumber } = NativeModules;
+const { RNVersionNumber } = TurboModuleRegistry ? TurboModuleRegistry.get('RNVersionNumber').getConstants() : NativeModules;
 
 type VersionObject = {
   appVersion: ?string,

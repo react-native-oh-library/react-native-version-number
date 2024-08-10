@@ -1,5 +1,5 @@
 {
-  "name": "react-native-version-number",
+  "name": "@react-native-oh-tpl/react-native-version-number",
   "version": "0.3.6",
   "description": "Access app version inside React Native",
   "main": "index.js",
@@ -15,13 +15,15 @@
     "react",
     "react-native",
     "react-component",
-    "ios"
+    "ios",
+    "harmony"
   ],
   "keywords": [
     "react",
     "react-native",
     "ios",
-    "react-component"
+    "react-component",
+    "harmony"
   ],
   "author": "Alvaro Medina Ballester <amedina@apsl.net>",
   "license": "MIT",
@@ -32,6 +34,15 @@
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.3.1",
-    "eslint-plugin-react": "^6.1.2"
+    "eslint-plugin-react": "^6.1.2",
+    "react-native-version-number": "0.3.6"
+  },
+  "harmony": {
+    "alias": "react-native-version-number",
+    "codegenConfig": {
+      "specPaths": [
+        "./src"
+      ]
+    }
   }
 }

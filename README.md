@@ -1,83 +1,19 @@
+# @react-native-oh-tpl/react-native-version-number
 
-# react-native-version-number
+本项目基于 [react-native-version-number](https://github.com/APSL/react-native-version-number)
 
-<p>
-<img src="https://travis-ci.org/APSL/react-native-version-number.svg?branch=master" />
-<img src="https://img.shields.io/npm/dm/react-native-version-number.svg" />
-<img src="https://img.shields.io/npm/dt/react-native-version-number.svg" />
-</p>
+## 文档地址 / Documentation URL 
 
-Returns the `CFBundleShortVersionString` and the `CFBundleVersion` and `bundleIdentifier` on IOS. For Android, returns the `versionName`, `versionCode` and `applicationId`.
+[中文 / Chinese](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-version-number.md)
 
+[英文 / English](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-en/react-native-version-number.md)
 
-|  | iOS | Android | Example |
-| --- | --- | --- | --- |
-| appVersion | `CFBundleShortVersionString` | `versionName` | `1.0.2` |
-| buildVersion | `CFBundleVersion` | `versionCode` | `42` |
-| bundleIdentifier | `bundleIdentifier` | `applicationId` | `com.foo.bar.MyApp`|
+## Codegen
 
+该库已接入 codegen，具体请查阅文档。
 
-## Getting started
+The library has been integrated with codegen. Please refer to the documentation for details.
 
-Install the package
+## 请悉知 / Acknowledgements
 
-`$ yarn add react-native-version-number`
-
-Link
-
-`$ react-native link react-native-version-number`
-
-#### Manual installation  
-
-**Android:**
-
-1. In your android/settings.gradle file, make the following additions:
-```java
-include ':react-native-version-number'   
-project(':react-native-version-number').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-version-number/android')
-```
-
-2. In your android/app/build.gradle file, add the `:react-native-version-number` project as a compile-time dependency:
-
-```java
-...
-dependencies {
-    ...
-    compile project(':react-native-version-number')
-}
-```
-
-3. Update the MainApplication.java file to use `react-native-version-number` via the following changes:   
-
-```java
-import com.apsl.versionnumber.RNVersionNumberPackage;
-
-public class MainApplication extends Application implements ReactApplication {
-
-    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-        ...
-        @Override
-        protected List<ReactPackage> getPackages() {
-            return Arrays.<ReactPackage>asList(
-                    new MainReactPackage(),
-                    new RNVersionNumberPackage(), // here
-            );
-        }
-    };
-    ...
-}
-```
-
-
-## Usage
-```javascript
-import VersionNumber from 'react-native-version-number';
-
-console.log(VersionNumber.appVersion);
-console.log(VersionNumber.buildVersion);
-console.log(VersionNumber.bundleIdentifier);
-
-```
-
-## License
-MIT.
+本项目基于 [The MIT License (MIT)](https://github.com/APSL/react-native-version-number/blob/master/LICENSE) ，请自由地享受和参与开源。
