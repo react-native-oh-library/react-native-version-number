@@ -1,11 +1,12 @@
 {
-  "name": "@react-native-oh-tpl/react-native-version-number",
-  "version": "0.3.6-0.0.1",
+  "name": "@react-native-ohos/react-native-version-number",
+  "version": "0.3.6",
   "description": "Access app version inside React Native",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name react-native-version-number --cpp-output-path ./harmony/rnoh_version_number/src/main/cpp/generated --ets-output-path ./harmony/rnoh_version_number/src/main/ets/generated --turbo-modules-spec-paths ./src/NativeRNVersionNumber.ts"
   },
   "repository": {
     "type": "git",
@@ -35,14 +36,10 @@
     "babel-eslint": "^6.1.2",
     "eslint": "^3.3.1",
     "eslint-plugin-react": "^6.1.2",
-    "react-native-version-number": "0.3.6"
+    "react-native-version-number": "0.3.6",
+    "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.27"
   },
   "harmony": {
-    "alias": "react-native-version-number",
-    "codegenConfig": {
-      "specPaths": [
-        "./src"
-      ]
-    }
+    "alias": "react-native-version-number"
   }
 }
