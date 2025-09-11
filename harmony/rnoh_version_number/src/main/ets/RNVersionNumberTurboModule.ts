@@ -7,7 +7,7 @@
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@ohos.base';
 import { TurboModule } from '@rnoh/react-native-openharmony/ts';
-import { TM } from "@rnoh/react-native-openharmony/generated/ts";
+import { TM } from "./generated/ts";
 import Logger from './Logger';
 
 const TAG = 'RNVersionNumber';

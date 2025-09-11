@@ -1,4 +1,4 @@
-# @react-native-oh-tpl/react-native-version-number
+# @react-native-ohos/react-native-version-number
 
 This project is based on [react-native-version-number](https://github.com/APSL/react-native-version-number)
 
