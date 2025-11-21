@@ -3,7 +3,7 @@
         "Name": "react-native-version-number",
         "License": "MIT License",
         "License File": "https://github.com/APSL/react-native-version-number/blob/master/LICENSE",
-        "Version Number": "0.3.6",
+        "Version Number": "0.4.0-rc.1",
         "Owner" : "xiafeng@huawei.com",
         "Upstream URL": "https://github.com/APSL/react-native-version-number",
         "Description": " Access app version inside React Native"
