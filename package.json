@@ -1,15 +1,20 @@
 {
-  "name": "@react-native-oh-tpl/react-native-version-number",
+  "name": "@react-native-ohos/react-native-version-number",
   "version": "0.3.6-0.0.1",
   "description": "Access app version inside React Native",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name react-native-version-number --cpp-output-path ./harmony/rnoh_version_number/src/main/cpp/generated --ets-output-path ./harmony/rnoh_version_number/src/main/ets/generated --turbo-modules-spec-paths ./src/NativeRNVersionNumber.ts  --arkts-components-spec-paths ./src"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/APSL/react-native-version-number.git"
+    "url": "https://github.com/react-native-oh-library/react-native-version-number.git"
+  },
+ "publishConfig": {
+  "registry": "https://registry.npmjs.org/",
+  "access": "public"
   },
   "tags": [
     "react",
@@ -28,21 +33,26 @@
   "author": "Alvaro Medina Ballester <amedina@apsl.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/APSL/react-native-version-number/issues"
+    "url": "https://github.com/react-native-oh-library/react-native-version-number/issues"
   },
-  "homepage": "https://github.com/APSL/react-native-version-number#readme",
+  "homepage": "https://github.com/react-native-oh-library/react-native-version-number#readme",
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.3.1",
     "eslint-plugin-react": "^6.1.2",
-    "react-native-version-number": "0.3.6"
+    "react-native-version-number": "0.3.6",
+    "metro": "0.82.5",
+    "memfs": "4.17.2",
+    "@react-native-community/cli": "11.4.1",
+    "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.27"
   },
   "harmony": {
     "alias": "react-native-version-number",
-    "codegenConfig": {
-      "specPaths": [
-        "./src"
-      ]
-    }
+    "autolinking": {
+    "etsPackageClassName":"VersionNumberPackage",
+    "cppPackageClassName":"VersionNumberPackage",
+    "cmakeLibraryTargetName": "rnoh_version_number", 
+    "ohPackageName": "@react-native-ohos/react-native-version-number"
+   } 
   }
 }
