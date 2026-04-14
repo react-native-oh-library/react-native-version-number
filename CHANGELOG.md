@@ -1,3 +1,6 @@
+# v0.5.0-rc.1
+* pre-release: @react-native-ohos/react-native-version-number@0.5.0-rc.1
+
 # v0.4.0
 - release v0.4.0
 

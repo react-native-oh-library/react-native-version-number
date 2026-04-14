@@ -1,6 +1,6 @@
 {
   "name": "@react-native-ohos/react-native-version-number",
-  "version": "0.4.0",
+  "version": "0.5.0-rc.1",
   "description": "Access app version inside React Native",
   "main": "index.js",
   "scripts": {
@@ -8,30 +8,19 @@
     "test": "npm run lint",
     "codegen-lib": "react-native codegen-lib-harmony --no-safety-check --npm-package-name react-native-version-number --cpp-output-path ./harmony/rnoh_version_number/src/main/cpp/generated --ets-output-path ./harmony/rnoh_version_number/src/main/ets/generated --turbo-modules-spec-paths ./src/NativeRNVersionNumber.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/APSL/react-native-version-number.git"
-  },
   "tags": [
     "react",
     "react-native",
     "react-component",
-    "ios",
     "harmony"
   ],
   "keywords": [
     "react",
     "react-native",
-    "ios",
     "react-component",
     "harmony"
   ],
-  "author": "Alvaro Medina Ballester <amedina@apsl.net>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/APSL/react-native-version-number/issues"
-  },
-  "homepage": "https://github.com/APSL/react-native-version-number#readme",
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "eslint": "^3.3.1",
