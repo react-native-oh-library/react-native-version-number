@@ -4,12 +4,12 @@
  * found in the LICENSE file.
  */
 
-import { RNPackage, TurboModulesFactory } from '@rnoh/react-native-openharmony/ts';
-import type { TurboModule, TurboModuleContext, } from '@rnoh/react-native-openharmony/ts';
+import { RNOHPackage, TurboModulesFactory } from '@rnoh/react-native-openharmony';
+import type { TurboModule, TurboModuleContext, } from '@rnoh/react-native-openharmony';
 import { TM } from "./generated/ts";
 import { RNVersionNumberTurboModule } from './RNVersionNumberTurboModule';
 
-class RNRNVersionNumberFactory extends TurboModulesFactory {
+class RNVersionNumberFactory extends TurboModulesFactory {
   createTurboModule(name: string): TurboModule | null {
     if (name === 'RNVersionNumber' ||  name === TM.RNVersionNumber.NAME) {
       return new RNVersionNumberTurboModule(this.ctx);
@@ -22,8 +22,8 @@ class RNRNVersionNumberFactory extends TurboModulesFactory {
   }
 }
 
-export class RNVersionNumberPackage extends RNPackage {
+export class RNVersionNumberPackage extends RNOHPackage {
   createTurboModulesFactory(ctx: TurboModuleContext): TurboModulesFactory {
-    return new RNRNVersionNumberFactory(ctx);
+    return new RNVersionNumberFactory(ctx);
   }
 }
